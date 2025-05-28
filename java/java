@@ -1,0 +1,70 @@
+public class MassiveApp {
+    public static void main(String[] args) {
+        System.out.println("Starting MassiveApp...");
+
+        for (int i = 0; i < 100; i++) {
+            Worker w = new Worker(i);
+            w.doWork();
+        }
+
+        System.out.println("Completed.");
+    }
+}
+
+class Worker {
+    private int id;
+
+    public Worker(int id) {
+        this.id = id;
+    }
+
+    public void doWork() {
+        System.out.println("Worker " + id + " is working...");
+        Helper.doSomething(id);
+    }
+}
+
+class Helper {
+    public static void doSomething(int id) {
+        System.out.println("Helper assisting Worker " + id);
+    }
+}
+
+
+class Task001 {
+    public static void run() {
+        System.out.println("Running Task001");
+    }
+}
+
+class Task002 {
+    public static void run() {
+        System.out.println("Running Task002");
+    }
+}
+
+class Task003 {
+    public static void run() {
+        System.out.println("Running Task003");
+    }
+
+// ... repeat similarly up to Task100
+
+class Task100 {
+    public static void run() {
+        System.out.println("Running Task100");
+    }
+}
+
+
+Task001.run();
+Task002.run();
+// ...
+Task100.run();
+
+
+
+
+
+
+
